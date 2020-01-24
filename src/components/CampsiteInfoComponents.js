@@ -3,6 +3,7 @@ import { Card, CardImg, CardBody, ModalHeader, ModalBody, Modal, Label, Breadcru
 import { Link } from 'react-router-dom';
 import { LocalForm, Control, Errors } from 'react-redux-form';
 import { Loading } from './LoadingComponent';
+import { baseURL } from '../shared/baseURL';
 
 
 const maxLength = len => val => !val || (val.length <= len);
@@ -89,7 +90,7 @@ function RenderCampsite({ campsite }) {
     return (
         <div className="col-md-5 m-1">
             <Card onClick={() => this.onCampsiteSelect(campsite)}>
-                <CardImg src={campsite.image} alt={campsite.name} />
+                <CardImg src={baseURL + campsite.image} alt={campsite.name} />
                 <CardBody>{campsite.description}</CardBody>
             </Card>
         </div>
