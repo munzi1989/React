@@ -14,6 +14,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 
 
+
 const mapStateToProps = state => {
     return {
         campsites: state.campsites,
@@ -32,7 +33,13 @@ const mapDispatchToProps = {
     fetchPromotions: () => (fetchPromotions())
 };
 
+
+
+
 class Main extends Component {
+
+
+ 
 
     componentDidMount() {
         this.props.fetchCampsites();

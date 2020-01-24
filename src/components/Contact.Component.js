@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Breadcrumb, BreadcrumbItem, Button, Label, Col, Row } from 'reactstrap';
-import { Control, Form, Errors, action } from 'react-redux-form';
+import { Control, Form, Errors} from 'react-redux-form';
 import { Link } from 'react-router-dom';
+import 'animate.css';
 
 const required = val => val && val.length;
 const maxLength = len => val => !val || (val.length <= len);
@@ -53,7 +54,7 @@ class Contact extends Component {
                             <BreadcrumbItem><Link to='./home'>Home</Link></BreadcrumbItem>
                             <BreadcrumbItem active>Contact Us</BreadcrumbItem>
                         </Breadcrumb>
-                        <h2>Contact Us</h2>
+                        <h2 className='animated bounce'>Contact Us</h2>
                         <hr />
                     </div>
                 </div>

@@ -3,6 +3,7 @@ import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem } 
 import { Link } from 'react-router-dom';
 import { Loading } from './LoadingComponent';
 import { baseURL } from '../shared/baseURL';
+import 'animate.css';
 
 
 function RenderDirectoryItem({ campsite }) {
@@ -62,7 +63,7 @@ function Directory(props) {
                         <BreadcrumbItem><Link to='./home'>Home</Link></BreadcrumbItem>
                         <BreadcrumbItem active>Directory</BreadcrumbItem>
                     </Breadcrumb>
-                    <h2>Directory</h2>
+                    <h2 className='animated bounce'>Directory</h2>
                     <hr />
                 </div>
             </div>

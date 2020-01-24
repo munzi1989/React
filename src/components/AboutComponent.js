@@ -2,6 +2,7 @@ import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
+import 'animate.css';
 
 
 
@@ -40,7 +41,7 @@ function About(props) {
                         <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
                         <BreadcrumbItem active>About Us</BreadcrumbItem>
                     </Breadcrumb>
-                    <h2>About Us</h2>
+                    <h2 className='animated bounce'>About Us</h2>
                     <hr />
                 </div>
             </div>

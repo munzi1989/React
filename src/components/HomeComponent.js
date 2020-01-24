@@ -3,6 +3,9 @@ import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
 import { Loading } from './LoadingComponent';
 import { baseURL } from '../shared/baseURL';
 import { FadeTransform } from 'react-animation-components';
+import 'animate.css';
+
+
 
 
 function RenderCard({ item, isLoading, errMess }) {
@@ -21,7 +24,9 @@ function RenderCard({ item, isLoading, errMess }) {
             transformProps={{
                 exitTransform: 'scale(0.5) translate(50%)'
             }}>
-            <Card>
+                
+            <Card >
+                
                 <CardImg src={baseURL + item.image} alt={item.name} />
                 <CardBody>
                     <CardTitle>{item.name}</CardTitle>
