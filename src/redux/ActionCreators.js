@@ -86,18 +86,19 @@ export const postComment = (campsiteId, rating, author, text) => dispatch => {
         })
 };
 
-export const postFeeback = (feedback) => dispatch => {
+export const postFeedback = (feedback) => dispatch => {
 
-    
 
-    return fetch(baseURL + "feedback", {
+
+    return fetch(baseURL + 'feedback', {
         method: "POST",
-        body: JSON.stringify(feedback),
+        body: JSON.stringify({ feedback }),
         headers: {
             "Content-Type": "application/json"
-            
+
         }
-        
+
+
     })
         .then(response => {
             if (response.ok) {
@@ -112,7 +113,7 @@ export const postFeeback = (feedback) => dispatch => {
             error => { throw error; }
         )
         .then(response => response.json())
-        .then(response => alert('Thank you for your feedback: ' + response))
+        .then(response => alert('Thank you for your feedback: ' + response.value))
         .catch(error => {
             console.log('post feedback', error.message);
             alert('Your feedback could not be posted\n Error: + error.message')
@@ -231,7 +232,7 @@ export const fetchPartners = () => dispatch => {
         .then(partners => dispatch(addPartners(partners)))
         .catch(error => dispatch(partnersFailed(error.message))
         )
-        
-        
+
+
 };
 
